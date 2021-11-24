@@ -1,0 +1,25 @@
+{
+  "name": "benewebapp",
+  "version": "1.0.0",
+  "description": "Accept tips from the browser",
+  "main": "bene.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon bene.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ns804.git.beanstalkapp.com/benewebapp.git"
+  },
+  "author": "David Gerstenmier",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "rxjs": "^7.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
