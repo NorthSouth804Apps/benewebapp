@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+:root {
+    --primary-color: #1a1f35;
+    --font-color: white;
+    --border-color: #fefefe;
+}
+
+
+h4 {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+p {
+    color: white;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.label  {
+    color: var(--font-color);
+    font-size: 1em;
+}
+
+.image-size  {
+    width: 3em;
+    height: 3em;
+}
+
+.message {
+    color: var(--font-color);
+    font-size: 1em;
+    margin: .25em .25em;
+
+}
+
+.main {
+    background-color: #1a1f35;
+}
+
+#body {
+    background-color: #1a1f35;
+}
+

@@ -1,0 +1,12 @@
+<div class="main">
+    <app-profile 
+        [serviceProvider]="serviceProvider">
+    </app-profile>
+    <app-tipamount 
+        (tipAmount)="onTipSelected($event)"
+        [paymentIntent]="paymentIntent">
+    </app-tipamount>
+    <app-payment
+        [paymentIntent]="paymentIntent">
+    </app-payment>
+</div>
