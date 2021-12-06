@@ -3,12 +3,6 @@
         <label class="label">Total Amount</label>
         <p id="total">{{totalAmount}}</p>
     </div>
-    <div class="w-50 mx-auto disclosure">        
-        <p class="message">{{platformFeeAlert}}</p>
-    </div>
-    <div class="w-50 mx-auto disclosure">        
-        <p class="message">{{platformFeeTipAlert}}</p>
-    </div>
     <div class="button-wrapper">
         <div class="d-inline-block select-btn">
             <label type="button" id="five" class="btn" (click)="setFiveDollars()">$5</label>
@@ -23,8 +17,15 @@
             <label for="tip" class="label">Other Amount</label>
             <input class="input-cell"  id="tip" placeholder="$0.00" formControlName="tip" currencyformatter/>
         </div>
+        <div class="select-tip">        
+            <label type="button" class="btn"  (click)="leaveTip()" id="pay">pay</label>
+        </div>  
     </div>
-    <div class="select-tip">        
-        <label type="button" class="btn"  (click)="leaveTip()" id="pay">pay</label>
-    </div>        
+    <div class="w-50 mx-auto disclosure">        
+        <p class="message">{{platformFeeAlert}}</p>
+    </div>
+    <div class="w-50 mx-auto disclosure">        
+        <p class="message">{{platformFeeTipAlert}}</p>
+    </div>
+          
 </div>

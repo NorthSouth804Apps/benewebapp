@@ -1,17 +1,4 @@
 
-.circular--landscape {
-    position: relative;
-    width: 10rem;
-    height: 10rem;
-    overflow: hidden;
-    border-radius: 50%;
-
-    img {
-        width: auto;
-        height: 100%;
-        margin-left: -6.25rem;
-      }
-  }
 
 .rounded-circle {
     border-top-left-radius: 50% 50%;
@@ -21,15 +8,16 @@
       
 }
 
-.circleborder {
-  margin: auto;
-  display: block;
-  border-radius: 50%;
-  width: 11rem;
-  height: 11rem;
-  padding: 10px;
-  border: 3px solid #FFF;
-  color: #000;
-  text-align: center;
-  font: 32px Arial, sans-serif;
+.profile-img {
+    display: block;
+    border-radius: 20em;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+    border: .1em solid var(--border-color);
+    padding: .25em;
+}
+
+.img-div {
+    display: flex;
+    justify-content: center;
 }
