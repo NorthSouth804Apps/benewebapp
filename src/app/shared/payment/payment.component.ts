@@ -1,16 +1,12 @@
-import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
-import { StripeService, StripePaymentElementComponent } from 'ngx-stripe';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, ElementRef, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { async } from '@angular/core/testing/testing';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  loadStripe, Stripe, StripeElementsOptions, StripeError, StripePaymentElementOptions
+} from '@stripe/stripe-js';
+import { StripePaymentElementComponent, StripeService } from 'ngx-stripe';
 import { Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import {
-  StripePaymentElementOptions,
-  StripeElementsOptions,
-  Stripe,
-  StripeError,
-  loadStripe
-} from '@stripe/stripe-js';
-import { async } from '@angular/core/testing/testing';
 
 @Component({
   selector: 'app-payment',

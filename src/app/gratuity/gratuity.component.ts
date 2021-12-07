@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { GratuityService } from './gratuity.service';
-import { Subject } from 'rxjs';
 import { Router } from '@angular/router';
+import { Subject } from 'rxjs';
+import { fade } from '../common/animations/fade';
 import { RouterExtService } from '../services/router.service';
+import { GratuityService } from './gratuity.service';
 
 @Component({
   selector: 'app-gratuity',
   templateUrl: './gratuity.component.html',
-  styleUrls: ['./gratuity.component.scss']
+  styleUrls: ['./gratuity.component.scss'],
+  animations: [
+    fade,
+  ]
 })
 export class GratuityComponent implements OnInit {
 
@@ -16,7 +20,7 @@ export class GratuityComponent implements OnInit {
   private selectedTip: number = 0;
   private mServiceProvider;
   private mPaymentIntent;
-
+  public hideTipAmmount: boolean;
   paymentIntent = new Subject;
   serviceProvider = new Subject;
   totalAmount = new Subject;
@@ -42,6 +46,7 @@ export class GratuityComponent implements OnInit {
           this.mPaymentIntent = paymentIntent;
           this.paymentIntent.next(this.mPaymentIntent);
         });
+        this.hideTipAmmount = true;
       }else{
         //TODO: correct payment intent in the event tip amount has changed.  
         this.paymentIntent.next(this.mPaymentIntent);
