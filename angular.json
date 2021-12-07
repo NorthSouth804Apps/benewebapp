@@ -30,6 +30,8 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/.well-known/apple-developer-merchantid-domain-association",
+              { "glob": "apple-developer-merchantid-domain-association", "input": "src/.well-known/", "output": "/" },
               "src/favicon.ico",
               "src/assets"
             ],

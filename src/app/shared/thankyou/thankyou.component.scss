@@ -1,0 +1,17 @@
+.thank-you-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    p {
+        font-weight: 300 !important;
+    }
+
+    i {
+        font-size: 60px;
+        color: white;
+    }
+}

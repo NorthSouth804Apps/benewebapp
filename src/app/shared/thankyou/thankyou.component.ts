@@ -1,4 +1,6 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-thankyou',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThankyouComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(
+    private activatedRouter: ActivatedRoute,
+  ) { }
+  amount;
+  
   ngOnInit(): void {
+    const amountArr = this.activatedRouter.snapshot.queryParams['amount'].split('');
+    amountArr[amountArr.length - 3] = amountArr[amountArr.length - 3] + '.'
+    this.amount = amountArr.join('');
   }
 
 }
