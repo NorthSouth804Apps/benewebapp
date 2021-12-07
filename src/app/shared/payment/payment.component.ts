@@ -30,7 +30,6 @@ export class PaymentComponent implements OnInit {
   card! : any;
   cardErrors! : any;
   stripe;
-  loading = false;
   confirmation! : any;
 
   amount = 0.00;
@@ -42,12 +41,12 @@ export class PaymentComponent implements OnInit {
 
   async handleForm(e) {
     e.preventDefault();
-    this.loading = true;
+    this.loadingForm = true;
     let  elements = this.elements;
     this.stripeService.confirmPayment({elements, confirmParams: {
       return_url: environment.PAYMENT_REDIRECT
     }}).subscribe(err => {
-      this.loading = false;
+      this.loadingForm = false;
       if(err){
         
         console.log('stripe-error',err);
