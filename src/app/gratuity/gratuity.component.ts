@@ -39,6 +39,8 @@ export class GratuityComponent implements OnInit {
   onTipSelected(event) {
     if(event && event > 0){
       this.selectedTip = event;
+      this.hideTipAmmount = true;
+
       //check if payment intent has been fetched
       if(!this.mPaymentIntent){
         this.gratuityService.fetchPaymentIntent(this.mServiceProvider.serviceProvider.serviceProviderID, this.selectedTip).subscribe(paymentIntent => {
@@ -46,9 +48,10 @@ export class GratuityComponent implements OnInit {
           this.mPaymentIntent = paymentIntent;
           this.paymentIntent.next(this.mPaymentIntent);
         });
-        this.hideTipAmmount = true;
       }else{
         //TODO: correct payment intent in the event tip amount has changed.  
+        console.log(this.mPaymentIntent, 'what so');
+        this.mPaymentIntent.amount = this.selectedTip;
         this.paymentIntent.next(this.mPaymentIntent);
       }
     }
