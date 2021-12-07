@@ -1,0 +1,69 @@
+
+.background {
+    background-color: var(--primary-color);
+}
+.button-wrapper {
+    padding: .5em .2em;
+}
+.btn {
+    background-color: var(--button-color);
+}
+
+#p {
+    margin: 0em 0em !important;
+}
+
+.total {
+    font-size: 1.25em;
+    color: var(--font-color);
+}
+
+.input {
+    padding: 1em .25em;
+}
+
+.label {
+    color: white;
+    padding: 0em 1em;
+}
+.disclosure {
+    padding: .1em .25em;
+    .message {
+        font-size: .75em;
+    }
+}
+
+.input-cell {
+    border: .1em solid var(--border-color);
+    background-color: var(--primary-color);
+    color: var(--font-color);
+    padding: .2em 1em;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.select-tip {
+    width: 100%;
+}
+
+.process-pay-button {
+    background-color: #000;
+    color: #fff;
+    &:disabled {
+        background-color: gray;
+    }
+}
+.apple-pay {
+    font-weight: 500;
+}
+
+.tip-amount-container {
+    width: 200px;
+
+    .tip-amount-option {
+        width: 60px;
+        button {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+
+
+.rounded-circle {
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+      
+}
+
+.profile-img {
+    display: block;
+    border-radius: 20em;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+    border: .1em solid var(--border-color);
+    padding: .25em;
+}
+
+.img-div {
+    display: flex;
+    justify-content: center;
+}
+

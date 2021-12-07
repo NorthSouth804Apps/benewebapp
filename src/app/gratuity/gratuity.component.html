@@ -1,0 +1,18 @@
+<div class="main">
+  <app-profile [serviceProvider]="serviceProvider"> </app-profile>
+  <div [@fade]="hideTipAmmount ? 'out' : 'in'">
+    <app-tipamount
+      (tipAmount)="onTipSelected($event)"
+      [paymentIntent]="paymentIntent"
+    >
+    </app-tipamount>
+  </div>
+  <div *ngIf="hideTipAmmount d-inline-block">
+    <button class="btn ms-5 btn-light" (click)="hideTipAmmount = false">
+      <i class="bi bi-arrow-90deg-left"></i> Change Amount
+    </button>
+  </div>
+  <div [@fade]="hideTipAmmount ? 'in' : 'out'">
+    <app-payment [paymentIntent]="paymentIntent"> </app-payment>
+  </div>
+</div>

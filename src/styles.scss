@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap-icons/font/bootstrap-icons.scss";
+
+:root {
+    --primary-color: #232121;
+    --font-color: white;
+    --border-color: #7a7979;
+    --button-color: #f4f4f4;
+}
+
+@font-face {
+    font-family: 'app-font';
+    src: url("assets/font.otf");
+}
+
+h4 {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+p {
+    color: white;   
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.label  {
+    color: var(--font-color);
+    font-size: 1em;
+}
+
+.image-size  {
+    width: 8em;
+    height: 8em;
+}
+
+.message {
+    color: var(--font-color);
+    font-size: 1em;
+    margin: .25em .25em;
+
+}
+
+.main {
+    background-color: var(--primary-color);
+}
+
+body {
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'app-font' !important;
+
+}
+
+.divider {
+    background-color: var(--border-color);
+    padding: 0.01rem 10em;
+    margin: 20px;
+}
