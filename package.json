@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "dev-williams": "ng serve --host 10.0.0.13",
-    "deploy": "git push -u git@github.com:NorthSouth804Apps/benewebapp.git master --force",
+    "deploy": "git push -u git@github.com:NorthSouth804Apps/benewebapp.git HEAD",
     "build": "ng build",
     "prod": "ng build  --configuration production",
     "watch": "ng build --watch --configuration development",
