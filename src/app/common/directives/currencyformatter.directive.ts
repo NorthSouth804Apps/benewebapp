@@ -53,7 +53,7 @@ export class CurrencyformatterDirective implements OnDestroy {
   }
 
   formatPrice(v) {
-    return this.formatter.format(v);
+    return this.formatter.format(v.replace('$', ''));
   }
 
   setValue(v) {

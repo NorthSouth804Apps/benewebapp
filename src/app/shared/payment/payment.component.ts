@@ -16,13 +16,14 @@ import { environment } from 'src/environments/environment';
 export class PaymentComponent implements OnInit {
 
   @Input() paymentIntent: Subject<any>;
-
   stripeTest!: FormGroup;
   pi! : Object;
   private elements;
   cardOptions: StripePaymentElementOptions = {
     
   };
+  public loadingForm?: boolean;
+
 
   @ViewChild('paymentElement') paymentElement!:ElementRef;
 
@@ -57,6 +58,7 @@ export class PaymentComponent implements OnInit {
   subscribeToAmount(){
 
     this.paymentIntent.subscribe(pi => {
+ 
       console.log('payment',pi);
       this.pi = pi;
       this.amount = pi.amount;
@@ -67,15 +69,20 @@ export class PaymentComponent implements OnInit {
   }
 
   createStripeElement(client_secret){
+     // seting loading while the form is mounted
+     this.loadingForm = true;
     this.stripe = loadStripe('pk_test_4bYHi3AuP5PNZXw1WFZUsaDX00qy7g55AY').then((res) =>{
 
       if(res){
         this.elements = res.elements({clientSecret: client_secret, appearance: this.setStripeAppearance()});
         this.card = this.elements.create('payment');
         this.card.mount(this.paymentElement.nativeElement);
-
         this.card.addEventListener('change', ({ error }) => {
+        this.loadingForm = false;
+
           if(error)this.cardErrors = error && error.message;
+         
+
         });
       }
     });

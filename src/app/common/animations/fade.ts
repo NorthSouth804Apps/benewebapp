@@ -8,8 +8,7 @@ export const fade = trigger('fade', [
     state('out', style({
       maxHeight: '0',
       opacity: 0,
-      position: 'absolute',
-      zIndex: -1,
+      display: 'none'
     })),
     transition('in => out', [
       animate('1s')

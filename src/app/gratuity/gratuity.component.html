@@ -8,7 +8,11 @@
     </app-tipamount>
   </div>
   <div *ngIf="hideTipAmmount">
-    <button (click)="hideTipAmmount = false">Back</button>
+    <button class="btn ms-5 btn-light" (click)="hideTipAmmount = false">
+      Back
+    </button>
   </div>
-  <app-payment [paymentIntent]="paymentIntent"> </app-payment>
+  <div [@fade]="hideTipAmmount ? 'in' : 'out'">
+    <app-payment [paymentIntent]="paymentIntent"> </app-payment>
+  </div>
 </div>

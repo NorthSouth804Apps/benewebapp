@@ -4,8 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "dev-williams": "ng serve --host 10.0.0.13",
     "build": "ng build",
-    "prod" : "ng build  --configuration production",
+    "prod": "ng build  --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -21,6 +22,7 @@
     "@angular/router": "~13.0.0",
     "@stripe/stripe-js": "^1.21.1",
     "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.7.2",
     "ngx-stripe": "^13.0.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",

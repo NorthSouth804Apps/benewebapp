@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap-icons/font/bootstrap-icons.scss";
 
 :root {
-    --primary-color: #1a1f35;
+    --primary-color: #232121;
     --font-color: white;
     --border-color: #7a7979;
     --button-color: #f4f4f4;
@@ -16,7 +17,7 @@ h4 {
 }
 
 p {
-    color: white;
+    color: white;   
     text-align: center;
     font-size: 1.25rem;
 }
@@ -39,16 +40,17 @@ p {
 }
 
 .main {
-    background-color: #1a1f35;
+    background-color: var(--primary-color);
 }
 
-#body {
-    background-color: #1a1f35;
+body {
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .divider {
     background-color: var(--border-color);
-    padding: 0.05rem 10em;
-    margin: 1em 4em 1em;
+    padding: 0.01rem 10em;
+    margin: 20px;
 }
-
