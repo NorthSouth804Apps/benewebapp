@@ -36,4 +36,6 @@ export class GratuityService implements OnInit, OnDestroy{
     params.append('amount', amount+'');
     return this.apiService.callApi(endpoints.FETCH_PAYMENT_INTENT,params);
   }
+
+  
 }

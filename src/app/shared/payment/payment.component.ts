@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild, ElementRef, Input, AfterViewInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { Component, OnInit, ViewChild, ElementRef, Input, Output, AfterViewInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { async } from '@angular/core/testing/testing';
 import { Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import {
@@ -15,30 +16,30 @@ import {
   templateUrl: './payment.component.html',
   styleUrls: ['./payment.component.scss']
 })
-export class PaymentComponent implements OnInit, AfterViewInit {
+export class PaymentComponent implements OnInit {
 
   elementsOptions: StripeElementsOptions = {
     locale: 'en'
   };
 
   @Input() paymentIntent: Subject<any>;
-
   stripeTest!: FormGroup;
   pi! : Object;
   private elements: StripeElements;
 
   // cardOptions: StripePaymentElementOptions = {
     
-  // };
+  //};
+  public loadingForm?: boolean;
+
 
   @ViewChild('paymentElement') paymentElement!:ElementRef;
 
-  // @ViewChild(StripeCardComponent) card: StripeCardComponent;
-
   card! : any;
-  stripe: Stripe;
   cardErrors! : any;
   loading = false;
+  
+  stripe;
   confirmation! : any;
 
   amount = 0.00;
@@ -58,7 +59,7 @@ export class PaymentComponent implements OnInit, AfterViewInit {
     e.preventDefault();
 
     if (!this.loading) {
-
+      this.loadingForm = true;
       this.loading = true;
       const elements = this.elements;
   
@@ -68,6 +69,7 @@ export class PaymentComponent implements OnInit, AfterViewInit {
           return_url: environment.PAYMENT_REDIRECT
         }
       }).then(({ error }) => {
+        this.loadingForm = false;
         this.loading = false;
 
         // This point will only be reached if there is an immediate error when
@@ -91,6 +93,7 @@ export class PaymentComponent implements OnInit, AfterViewInit {
   subscribeToAmount(){
 
     this.paymentIntent.subscribe(pi => {
+ 
       console.log('payment',pi);
       this.pi = pi;
       this.amount = pi.amount;
@@ -101,14 +104,15 @@ export class PaymentComponent implements OnInit, AfterViewInit {
   }
 
   createStripeElement(client_secret){
-
+     // seting loading while the form is mounted
+     this.loadingForm = true;
     loadStripe('pk_test_4bYHi3AuP5PNZXw1WFZUsaDX00qy7g55AY').then(stripe => {
 
         if (!stripe) {
           console.log('Failed to load stripe');
           return;
         }
-
+        this.loadingForm = false;
         this.stripe = stripe;
         this.elements = stripe.elements({
           clientSecret: client_secret,
@@ -123,9 +127,12 @@ export class PaymentComponent implements OnInit, AfterViewInit {
 
         this.card = this.elements.create('payment');
         this.card.mount(this.paymentElement.nativeElement);
-
         this.card.addEventListener('change', ({ error }) => {
+          this.loadingForm = false;
+
           if(error)this.cardErrors = error && error.message;
+         
+
         });
 
     });

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { NgxStripeModule } from 'ngx-stripe';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -31,10 +32,11 @@ import { NotfoundComponent } from './shared/notfound/notfound.component';
   ],
   imports: [
     NgxStripeModule.forRoot('pk_test_4bYHi3AuP5PNZXw1WFZUsaDX00qy7g55AY'),
-    BrowserModule,
+    BrowserModule, BrowserAnimationsModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [ApiService,RouterExtService,{provide:HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}],
   bootstrap: [AppComponent]

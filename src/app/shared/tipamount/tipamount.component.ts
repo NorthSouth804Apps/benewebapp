@@ -69,6 +69,7 @@ export class TipamountComponent implements OnInit, OnDestroy {
     if(totalTip && totalTip > 0){
       this.tipAmount.emit(totalTip);
     }
+
   }
 
   //adds five percent platform fee
