@@ -7,7 +7,7 @@ import { ThankyouComponent } from './shared/thankyou/thankyou.component';
 const routes: Routes = [
   { path: 'gratuity', component: GratuityComponent},
   { path: 'not-found', component: NotfoundComponent},
-  { path: 'thanks', component: ThankyouComponent},
+  { path: 'thankyou', component: ThankyouComponent},
   { path: '',   redirectTo: '/gratuity', pathMatch: 'full' },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
