@@ -13,7 +13,14 @@
 }
 
 .btn {
-    background-color: var(--border-color);
     width: 100%;
     border-radius: 8px;
+}
+
+.pay-button {
+    background-color: #000 !important;
+    color: #fff !important;
+    &:disabled {
+        background-color: gray !important;
+    }
 }

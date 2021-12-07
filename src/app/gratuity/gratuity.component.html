@@ -7,9 +7,9 @@
     >
     </app-tipamount>
   </div>
-  <div *ngIf="hideTipAmmount">
+  <div *ngIf="hideTipAmmount d-inline-block">
     <button class="btn ms-5 btn-light" (click)="hideTipAmmount = false">
-      Back
+      <i class="bi bi-arrow-90deg-left"></i> Change Amount
     </button>
   </div>
   <div [@fade]="hideTipAmmount ? 'in' : 'out'">
