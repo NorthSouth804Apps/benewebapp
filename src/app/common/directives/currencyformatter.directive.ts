@@ -53,10 +53,18 @@ export class CurrencyformatterDirective implements OnDestroy {
   }
 
   formatPrice(v) {
+    console.log('formatting',v);
+    if(v === '$0.00'){
+      return this.formatter.format(0);
+    }
     return this.formatter.format(v);
   }
 
   setValue(v) {
+    if(v === 0.00){
+      console.log('set value',  'undefined');
+    }
+
     console.log('set value',v);
     this.ngControl.control!.setValue( v, { emitEvent: false });
   }
