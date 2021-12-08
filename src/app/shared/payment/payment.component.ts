@@ -69,10 +69,6 @@ export class PaymentComponent implements OnInit {
         .confirmPayment({
           elements,
           redirect: "if_required",
-          // confirmParams: {
-          //   // return_url: environment.PAYMENT_REDIRECT + '/?amount=' + this.amount,
-          //   redirect: "if_required",
-          // }
         })
         .then(({ error }) => {
           this.loadingForm = false;
@@ -128,6 +124,11 @@ export class PaymentComponent implements OnInit {
             colorText: '#FEFEFE',
             fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
           },
+          rules: {
+            '.Error': {
+                fontSize: '12px',
+            }
+          }
         },
       });
 
