@@ -1,0 +1,18 @@
+{
+    "demo": {
+      "greetings": "Ha sido un placer servirte.",
+      "greetThanks": "¡Gracias!",
+      "totalAmountText": "Monto total", 
+      "otherAmount": "Otro Monto",
+      "changeAmount": "Cambiar Monto",
+      "feeAlert": "Se aplicará una tarifa de plataforma del 5%.",
+      "platformFeeAlert": "La tarifa de la plataforma no es parte de la propina.",
+      "processTip": "Procesar Propina",
+      "tipFor": "Propina de",
+      "thankYou": "GRACIAS",
+      "tipSent": "Su propina de {{amount}} ha sido enviada.",
+      "closePage": "Puede cerrar esta página."
+    }
+  }
+
+

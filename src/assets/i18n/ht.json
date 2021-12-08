@@ -1,0 +1,16 @@
+{
+  "demo": {
+    "greetings": "Se yon plezi ki ap sevi ou.",
+    "greetThanks": "Mèsi!",
+    "totalAmountText": "kantite total",
+    "feeAlert": "Yon fre platfom 5 ap aplike.",
+    "platformFeeAlert": "Fre Platfom se pa yon pati nan pwent la.",
+    "thankYou": "MÈSI",
+    "tipSent": "Pwent ou {{amount}} te voye.",
+    "closePage": "Ou ka femen paj sa a.",
+    "otherAmount": "Lòt montan",
+    "changeAmount": "Chanje kantite lajan",
+    "processTip": "Pwosesis pwent",
+    "tipFor": "Konsèy nan"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "demo": {
+    "greetings": "Ce ce sera un plaisir de vous servir.",
+    "greetThanks": "Merci!",
+    "totalAmountText": "Montant total",
+    "feeAlert": "Des frais de plate-forme de 5% s’appliqueront.",
+    "platformFeeAlert": "Les frais de plateforme ne font pas partie du pourboire.",
+    "thankYou": "MERCI",
+    "tipSent": "Votre pourboire de {{amount}} a été envoyé.",
+    "closePage": "Vous pouvez fermer cette page.",
+    "otherAmount": "Autre Montant",
+    "changeAmount": "Modifier le Montant",
+    "processTip": "Astuce de processus",
+    "tipFor": "Astuce de"
+  }
+}
