@@ -14,8 +14,13 @@ export class AppComponent {
     private translate: TranslateService){
       // setting default translation
       translate.setDefaultLang('en');
-      translate.use(navigator.language)
+      translate.use(this.getDeviceLanguage())
+
     }
+
+  getDeviceLanguage(): string {
+    return ['en', 'es', 'zh', 'ht', 'fr-FR'].find(item => navigator.language.toLowerCase().includes(item.toLowerCase()))
+  }
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
