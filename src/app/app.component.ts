@@ -14,6 +14,7 @@ export class AppComponent {
     private translate: TranslateService){
       // setting default translation
       translate.setDefaultLang('en');
+      translate.use(navigator.language)
     }
 
   ngOnInit(): void {

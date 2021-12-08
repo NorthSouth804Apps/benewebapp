@@ -1,0 +1,16 @@
+{
+  "demo": {
+    "greetings": "喜甚为您服务。",
+    "greetThanks": "谢!",
+    "totalAmountText": "总量",
+    "feeAlert": "将收5%台费。",
+    "platformFeeAlert": "台费非一。",
+    "thankYou": "谢谢",
+    "tipSent": "君小费已发。",
+    "closePage": "君可闭此页面。",
+    "otherAmount": "其他金额",
+    "changeAmount": "更改金额",
+    "processTip": "工艺提示",
+    "tipFor": "提示"
+  }
+}

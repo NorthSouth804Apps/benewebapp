@@ -1,6 +1,7 @@
 {
   "demo": {
-    "greetings": "It’s been a pleasure serving you. Thank You!",
+    "greetings": "It’s been a pleasure serving you.",
+    "greetThanks": "Thank You!",
     "totalAmountText": "Total Amount",
     "anotherAmountText": "Total Amount",
     "otherAmount": "Other Amount",
@@ -10,7 +11,7 @@
     "payWithCreditCard": "Pay with Credit Card",
     "payWith": "Pay with",
     "processTip": "Process Tip",
-    "tipFor": "Tip for",
+    "tipFor": "Tip of",
     "orPayWith": "Or pay with card",
     "cardInformation": "Card Information",
     "scanCard": "Scan Card",
