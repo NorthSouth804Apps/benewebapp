@@ -100,7 +100,7 @@ export class PaymentComponent implements OnInit {
     this.paymentIntent.subscribe((pi) => {
       console.log('payment', pi);
       this.pi = pi;
-      this.amount = pi.amount;
+      this.amount = pi.amount > 10500 ? 10500 : pi.amount < 100 ? 100 : pi.amount;
       this.createStripeElement(pi.client_secret);
     });
   }

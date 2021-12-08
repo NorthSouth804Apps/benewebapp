@@ -45,12 +45,12 @@ export class GratuityComponent implements OnInit {
       if(!this.mPaymentIntent){
         this.gratuityService.fetchPaymentIntent(this.mServiceProvider.serviceProvider.serviceProviderID, this.selectedTip).subscribe(paymentIntent => {
           //storing payment intent if the user decides to  change amount.
+    
           this.mPaymentIntent = paymentIntent;
           this.paymentIntent.next(this.mPaymentIntent);
         });
       }else{
         //TODO: correct payment intent in the event tip amount has changed.  
-        console.log(this.mPaymentIntent, 'what so');
         this.mPaymentIntent.amount = this.selectedTip;
         this.paymentIntent.next(this.mPaymentIntent);
       }

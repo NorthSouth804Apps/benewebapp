@@ -78,9 +78,9 @@ export class CurrencyformatterDirective implements OnDestroy {
     }
     if(this.ngControl.control!.value > 100){
       const strippedValue = v.slice(0,v.length - 1);
-      console.log('decimal format');
-      console.log(strippedValue);
       return Number.isNaN(Number(strippedValue)) ? '' : strippedValue;
+    } else if (this.ngControl.control!.value < 1) {
+      return 1;
     }
     return v;
   }
