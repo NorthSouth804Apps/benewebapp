@@ -1,6 +1,6 @@
 <div class="mx-auto col-sm-offset-5 col-md-6 text-center mt-20 background">
   <div class="w-50 mx-auto">
-    <h2 class="text-white">Total Amount</h2>
+    <h2 class="text-white">{{'demo.totalAmountText' | translate}}</h2>
     <p id="total">{{ totalAmount }}</p>
   </div>
   <div class="button-wrapper d-flex flex-column align-items-center">
@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="d-flex align-items-center flex-column input" [formGroup]="form">
-      <label for="tip" class="label">Other Amount</label>
+      <label for="tip" class="label">{{ 'demo.otherAmount' | translate }}</label>
       <input
         class="input-cell"
         id="tip"
@@ -43,14 +43,14 @@
         (click)="leaveTip()"
         id="pay"
       >
-        Process Tip
+        {{ 'demo.processTip' | translate }}
       </button>
     </div>
   </div>
   <div class="w-50 mx-auto disclosure">
-    <p class="message">{{ platformFeeAlert }}</p>
+    <p class="message">{{ 'demo.feeAlert' | translate }}</p>
   </div>
   <div class="w-50 mx-auto disclosure">
-    <p class="message">{{ platformFeeTipAlert }}</p>
+    <p class="message">{{ 'demo.platformFeeAlert' | translate }}</p>
   </div>
 </div>

@@ -1,0 +1,28 @@
+{
+  "demo": {
+    "greetings": "It’s been a pleasure serving you. Thank You!",
+    "totalAmountText": "Total Amount",
+    "anotherAmountText": "Total Amount",
+    "otherAmount": "Other Amount",
+    "changeAmount": "Change Amount",
+    "feeAlert": "A 5% platform fee will apply.",
+    "platformFeeAlert": "Platform fee is not part of the tip.",
+    "payWithCreditCard": "Pay with Credit Card",
+    "payWith": "Pay with",
+    "processTip": "Process Tip",
+    "tipFor": "Tip for",
+    "orPayWith": "Or pay with card",
+    "cardInformation": "Card Information",
+    "scanCard": "Scan Card",
+    "cardNumber": "Card Number",
+    "mm": "MM",
+    "yy": "YY",
+    "cvc": "CVC",
+    "countryOrRegion": "Country or region",
+    "zip": "Zip",
+    "pay": "Pay",
+    "thankYou": "THANK YOU",
+    "tipSent": "Your tip of {{amount}} has been sent.",
+    "closePage": "You may close out this page."
+  }
+}

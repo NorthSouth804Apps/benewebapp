@@ -11,6 +11,10 @@ export class TipamountComponent implements OnInit, OnDestroy {
 
   public form : FormGroup
 
+
+  public get totalAmountNumber(): number {
+    return Number(this.totalAmount.replace('$', ''))
+  }
   totalAmount = "$0.00";
   platformFeeAlert = "A 5% platform fee will apply.";
   platformFeeTipAlert = "Platform Fee is not part of tip."

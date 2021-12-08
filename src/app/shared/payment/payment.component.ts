@@ -112,6 +112,7 @@ export class PaymentComponent implements OnInit {
           console.log('Failed to load stripe');
           return;
         }
+        
         this.loadingForm = false;
         this.stripe = stripe;
         this.elements = stripe.elements({
